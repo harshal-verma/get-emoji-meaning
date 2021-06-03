@@ -105,54 +105,6 @@ const emojiDictionary = {
   "😿": "Crying Cat",
   "😾": "Pouting Cat",
   "💋": "Kiss Mark",
-  "👋": "Waving Hand",
-  "🤚": "Raised Back of Hand",
-  "🖐️": "Hand with Fingers Splayed",
-  "✋": "Raised Hand",
-  "🖖": "Vulcan Salute",
-  "👌": "OK Hand",
-  "🤏": "Pinching Hand",
-  "✌️": "Victory Hand",
-  "🤞": "Crossed Fingers",
-  "🤟": "Love-You Gesture",
-  "🤘": "Sign of the Horns",
-  "🤙": "Call Me Hand",
-  "👈": "Backhand Index Pointing Left",
-  "👉": "Backhand Index Pointing Right",
-  "👆": "Backhand Index Pointing Up",
-  "🖕": "Middle Finger",
-  "👇": "Backhand Index Pointing Down",
-  "☝️": "Index Pointing Up",
-  "👍": "Thumbs Up",
-  "👎": "Thumbs Down",
-  "✊": "Raised Fist",
-  "👊": "Oncoming Fist",
-  "🤛": "Left-Facing Fist",
-  "🤜": "Right-Facing Fist",
-  "👏": "Clapping Hands",
-  "🙌": "Raising Hands",
-  "👐": "Open Hands",
-  "🤲": "Palms Up Together",
-  "🤝": "Handshake",
-  "🙏": "Folded Hands",
-  "✍️": "Writing Hand",
-  "💅": "Nail Polish",
-  "🤳": "Selfie",
-  "💪": "Flexed Biceps",
-  "🦾": "Mechanical Arm",
-  "🦿": "Mechanical Leg",
-  "🦵": "Leg",
-  "🦶": "Foot",
-  "👂": "Ear",
-  "🦻": "Ear with Hearing Aid",
-  "👃": "Nose",
-  "🧠": "Brain",
-  "🦷": "Tooth",
-  "🦴": "Bone",
-  "👀": "Eyes",
-  "👁️": "Eye",
-  "👅": "Tongue",
-  "👄": "Mouth",
   "👶": "Baby",
   "🧒": "Child",
   "👦": "Boy",
@@ -161,44 +113,7 @@ const emojiDictionary = {
   "👱": "Person: Blond Hair",
   "👨": "Man",
   "🧔": "Person: Beard",
-  "👨‍🦰": "Man: Red Hair",
-  "👨‍🦱": "Man: Curly Hair",
-  "👨‍🦳": "Man: White Hair",
-  "👨‍🦲": "Man: Bald",
   "👩": "Woman",
-  "👩‍🦰": "Woman: Red Hair",
-  "👩‍🦱": "Woman: Curly Hair",
-  "👩‍🦳": "Woman: White Hair",
-  "👩‍🦲": "Woman: Bald",
-  "👱‍♀️": "Woman: Blond Hair",
-  "👱‍♂️": "Man: Blond Hair",
-  "🧓": "Older Person",
-"👴": "Old Man",
-"👵": "Old Woman",
-"🙍": "Person Frowning",
-"🙍‍♂️": "Man Frowning",
-"🙍‍♀️": "Woman Frowning",
-"🙎‍♂️": "Man Pouting",
-"🙎‍♀️": "Woman Pouting",
-"🙅‍♂️": "Man Gesturing No",
-"🙅‍♀️": "Woman Gesturing No",
-"🧍": "Person Standing",
-"🧍‍♂️": "Man Standing",
-"🧍‍♀️": "Woman Standing",
-"🧎": "Person Kneeling",
-"🧎‍♂️": "Man Kneeling",
-"🧎‍♀️": "Woman Kneeling",
-"👨‍🦯": "Man with White Cane",
-"👩‍🦯": "Woman with White Cane",
-"👨‍🦼": "Man in Motorized Wheelchair",
-"👩‍🦼": "Woman in Motorized Wheelchair",
-"👨‍🦽": "Man in Manual Wheelchair",
-"👩‍🦽": "Woman in Manual Wheelchair",
-"🏃": "Person Running",
-"🏃‍♂️": "Man Running",
-"🏃‍♀️": "Woman Running",
-"💃": "Woman Dancing",
-"🕺": "Man Dancing",
 };
 
 const emojisWeKnow = Object.keys(emojiDictionary);
@@ -210,7 +125,7 @@ function App() {
     const userInput = input.target.value;
     let emojiMeaning = emojiDictionary[userInput];
     if (emojiMeaning === undefined) {
-      emojiMeaning = "sorry! this emoji is not present in out database";
+      emojiMeaning = "sorry! this emoji is not present in our database. ";
     }
     setMeaning(emojiMeaning);
   }
@@ -224,39 +139,55 @@ function App() {
       <h1
         style={{
           textAlign: "center",
+          letterSpacing: "1px",
         }}
       >
-        get emoji meaning
+        get-emoji-meaning
       </h1>
       <input
         onChange={onChangeHandler}
         type="text"
         style={{
-          width: "400px",
+          width: "45%",
           padding: "1rem",
           display: "block",
           margin: "0px auto",
           border: "solid black 1px",
+          fontSize: "1.5rem",
         }}
       ></input>
       <div
         style={{
           border: "solid black 1px",
-          width: "400px",
-          height: "50px",
+          width: "45%",
+          backgroundColor: "#fff",
           margin: "16px auto",
+          fontWeight: "700",
+          fontSize: "1.5rem",
+          height: "auto",
+          padding: "1rem",
+          textAlign: "center",
+          textTransform: "lowercase",
         }}
       >
         {meaning}
       </div>
+      <h2
+         style={{
+           marginLeft: "4rem",
+           fontSize: "1.5rem",
+         }}
+      >smileys and people 👇</h2>
       <ul>
         {emojisWeKnow.map((emoji) => (
           <li
             onClick={() => emojiClickHandler(emoji)}
             style={{
               display: "inline",
-              padding: "1rem 0.5rem",
-              fontSize: "1.5rem",
+              padding: "0rem",
+              fontSize: "2rem",
+              margin: "1rem",
+              cursor: "pointer",
             }}
           >
             {emoji}
