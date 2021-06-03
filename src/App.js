@@ -194,6 +194,20 @@ function App() {
           </li>
         ))}
       </ul>
+      <footer
+        style={{
+          textAlign: "center",
+          backgroundColor: "#393c44",
+          padding: "0.5rem",
+        }}
+      >
+        &lt;/&gt; <span
+        style={{
+          color: "#F59E0B",
+          alignSelf: "flex-end",
+        }}
+        >by Harshal</span>
+      </footer>
     </div>
   );
 }
