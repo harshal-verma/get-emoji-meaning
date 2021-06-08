@@ -154,7 +154,7 @@ function App() {
         type="text"
         style={{
           width: "45%",
-          padding: "1rem",
+          padding: "1.25rem 1rem",
           display: "block",
           margin: "0px auto",
           border: "solid black 1px",
@@ -170,7 +170,7 @@ function App() {
           fontWeight: "700",
           fontSize: "1.5rem",
           height: "auto",
-          padding: "1rem",
+          padding: "1.25rem 1rem",
           textAlign: "center",
           textTransform: "lowercase",
         }}
