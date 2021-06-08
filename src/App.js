@@ -135,7 +135,12 @@ function App() {
     setMeaning(userInput);
   }
   return (
-    <div className="App">
+    <div 
+    style={{
+      display: 'flex',
+      flexDirection: "column",
+    }}
+    className="App">
       <h1
         style={{
           textAlign: "center",
@@ -172,12 +177,6 @@ function App() {
       >
         {meaning}
       </div>
-      <h2
-         style={{
-           marginLeft: "4rem",
-           fontSize: "1.5rem",
-         }}
-      >smileys and people 👇</h2>
       <ul>
         {emojisWeKnow.map((emoji) => (
           <li
@@ -198,13 +197,13 @@ function App() {
         style={{
           textAlign: "center",
           backgroundColor: "#393c44",
-          padding: "0.5rem",
+          padding: "0.75rem 0rem",
+
         }}
       >
         &lt;/&gt; <span
         style={{
           color: "#F59E0B",
-          alignSelf: "flex-end",
         }}
         >by Harshal</span>
       </footer>
